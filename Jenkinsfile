@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                echo 'Hello CI/CD'
+                git branch: 'main', url: 'https://github.com/example/myapp.git'
             }
         }
     }
